@@ -2,12 +2,20 @@
   <div class="notification is-light">
     <h1 class="title is-4 notification is-danger">Confirm Your Order</h1>
     <div class="tile is-ancestor">
-      <div class="tile is-parent is-4 ">
+      <div class="tile is-parent is-3">
           <div class="card">
           <header class="card-header">
-            <p class="card-header-title">
-              Seleted Package
+
+            <p class="card-header-title has-text-grey" v-if="$store.state.id===1">
+              Basic
             </p>
+            <p class="card-header-title has-text-grey" v-if="$store.state.id===2">
+              Premium
+            </p>
+            <p class="card-header-title has-text-grey" v-if="$store.state.id===3">
+              Platinum
+            </p>
+
             <a class="card-header-icon">
               <span class="icon">
                 <i class="fa fa-angle-down"></i>
@@ -15,17 +23,38 @@
             </a>
           </header>
           <div class="card-content">
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-              <a>@bulmaio</a>. <a>#css</a> <a>#responsive</a>
-              <br>
-              <small>11:09 PM - 1 Jan 2016</small>
+            <section>
+
+            <div class="content" v-if="$store.state.id===1">
+              <ul>
+                <li>Basic Hosting</li>
+                <li>All necessary features</li>
+                <li>.XYZ Domains</li>
+              </ul>
+            </div>
+            <div class="content" v-if="$store.state.id===2">
+              <ul>
+                <li>Paid Hosting</li>
+                <li>.COM Domain</li>
+                <li>Paid Hosting</li>
+              </ul>
+            </div>
+            <div class="content" v-if="$store.state.id===3">
+              <ul>
+                <li>Full Pack</li>
+                <li>Royal Features</li>
+                <li>.COM Domains</li>
+                <li>5 Year After Sales Support</li>
+              </ul>
+            </div>
+
+          </section>
+          </div>
+          <div class="card-footer">
+            <div class="card-footer-item notification is-primary">
+              <p class="has-shadow has-text-white"><router-link to="/"><strong>Change Plan</strong></router-link></p>
             </div>
           </div>
-          <footer class="card-footer">
-            <a class="card-footer-item">Go Back</a>
-            <a class="card-footer-item">Change</a>
-          </footer>
         </div>
       </div>
 
@@ -34,32 +63,32 @@
           <p>
         <form method="post">
           <div class="field">
-          <label class="label has-text-white">Name</label>
+          <label class="label has-text-grey">Name</label>
           <div class="control has-icons-left">
-            <input class="input is-success" type="text" placeholder="Your Full Name" v-model=order.name><span class="icon is-small is-left">
+            <input class="input is-info" type="text" placeholder="Your Full Name" v-model=order.name><span class="icon is-small is-left">
             <i class="fa fa-user"></i>
             </span>
           </div>
         </div>
         <div class="field">
-          <label class="label">Email</label>
+          <label class="label has-text-grey">Email</label>
           <div class="control has-icons-left">
-            <input class="input is-success" type="email" placeholder="Your Email" v-model=order.email>
+            <input class="input is-info" type="email" placeholder="Your Email" v-model=order.email>
             <span class="icon is-small is-left">
             <i class="fa fa-envelope"></i>
           </span>
           </div>
           </div>
-          <label class="label">Contact</label>
+          <label class="label has-text-grey">Contact</label>
           <div class="field has-addons">
           <div class="control has-icons-left">
-            <input class="input pin is-success" type="text" placeholder="+91" v-model=order.pin>
+            <input class="input pin is-info" type="text" placeholder="+91" v-model=order.pin>
             <span class="icon is-left">
             <i class="fa fa-mobile-phone fa-lg"></i>
             </span>
           </div>
           <div class="control">
-            <input class="input is-success" type="text" placeholder="Contact No" v-model=order.phone>
+            <input class="input is-info" type="text" placeholder="Contact No" v-model=order.phone>
           </div>
           </div>
           <div class="field">
@@ -71,78 +100,98 @@
 
       </div>
       <div class="tile is-child">
-        <label class="label">Description</label>
-        <textarea class="textarea is-success" placeholder="Your Use!" v-model=order.desc></textarea>
+        <label class="label has-text-grey">Description</label>
+        <textarea class="textarea is-info" placeholder="Your Use!" v-model=order.desc></textarea>
         <br>
-        <div class="content is-pulled-left">
+        <div class="content is-pulled-left has-text-danger">
           <div class="subtitle" v-if=err.email>
-            Email field is missing!
+            <span class="icon is-left">
+            <i class="fa fa-exclamation-triangle"></i>
+          </span>&nbsp;Email field is missing!
           </div>
           <div class="subtitle" v-if=err.phone>
-            Please enter phone Number
+            <span class="icon is-left">
+            <i class="fa fa-exclamation-triangle"></i>
+          </span>&nbsp;Please enter phone Number
           </div>
           <div class="subtitle" v-if=err.desc>
-            Description is Small
+            <span class="icon is-left">
+            <i class="fa fa-exclamation-triangle"></i>
+          </span>&nbsp;Description is Small
           </div>
           <div class="subtitle" v-if=err.pin>
-            Country Code is empty!
+            <span class="icon is-left">
+            <i class="fa fa-exclamation-triangle"></i>
+          </span>&nbsp;Country Code is empty!
           </div>
-
         </div>
-        <button type="button" class="button submit is-pulled-right" v-on:click="post">Submit</button>
-      </div>
-      </div>
+        <div class="subtitle has-text-primary is-pulled-left" v-if="loading">
+          Placing Your Order&nbsp;<i v-show="loading" class="fa fa-spinner fa-spin"></i>
+        </div>
+        <div class="subtitle has-text-info is-pulled-left" v-if="placed">
+        <span class="icon"><i v-show="placed" class="fa fa-check-circle"></i></span>&nbsp;  Order Placed
+        </div>
 
+        <button type="button" class="button submit is-pulled-right is-outlined is-info" v-on:click="post">Submit</button>
+      </div>
+      </div>
     </div>
-
-
-
-
   </div>
 </template>
 
 <script>
-export default {
 
+
+export default {
   data () {
     return {
+      loading: false,
       order: {email:"",phone:"",desc:"",name:"",pin:""},
-      err: {email:false,phone:false,desc:false,name:false,pin:false}
+      err: {email:false,phone:false,desc:false,name:false,pin:false},
+      placed: false
     }
   },
   methods: {
     post: function(){
+      this.loading= true;
       if(this.order.email.length==0){
+      this.loading= false;
       this.err.email=true;
       return;
       }
       this.err.email=false;
       if(this.order.pin.length==0){
+      this.loading= false;
       this.err.pin=true;
       return;
       }
       this.err.pin=false;
 
-      if(this.order.name.length==0){
+      if(this.order.name.length==0){this.loading= false;
       this.err.name=true;
       return;
       }
       this.err.name=false;
-      if(this.order.phone.length==0){
+      if(this.order.phone.length==0){this.loading= false;
       this.err.phone=true;
       return;
       }
       this.err.phone=false;
-      if(this.order.desc.length<=10){
+      if(this.order.desc.length<=10){this.loading= false;
         this.err.desc=true;
         return;
       }
       this.err.desc=false;
       this.$http.post('https://sitedesigns-28a77.firebaseio.com/orders.json',this.order).then(function(data){
         console.log(data);
+        this.loading= false;
+        this.placed = true;
       });
     }
-  }
+  },
+
+
+
 }
 </script>
 
@@ -155,6 +204,12 @@ export default {
 .tile .sec{
   margin-right: 3%;
 }
+a{
+  text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
 form{
   width: 90%;
 }
@@ -166,6 +221,12 @@ textarea{
 }
 .tile .is-parent .sec{
   border: 1px solid black;
+}
+input:active{
+  color: black;
+}
+.card-footer{
+  height: 40px;
 }
 
 </style>

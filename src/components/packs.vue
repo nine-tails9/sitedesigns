@@ -24,9 +24,9 @@
                   </section>
                 </div>
                 <div class="card-footer">
-                  <div class="card-footer-item button is-primary" v-on:click="listen(prop[0].id)">
+                  <div class="card-footer-item button is-primary" @click="listen(prop[0].id)">
                     <p v-if="!prop[0].show">Select</p>
-                    <p v-if="prop[0].show"><a href="/checkout">Proceed to Checkout</a></p>
+                    <p v-if="prop[0].show"><router-link to="/checkout">Proceed to Checkout</router-link></p>
                 </div>
               </div>
             </div>
@@ -76,9 +76,9 @@
                   </section>
                 </div>
                 <div class="card-footer">
-                  <div class="card-footer-item button is-primary" v-on:click="listen(prop[1].id)">
+                  <div class="card-footer-item button is-primary" v-on:click="select(prop[1].id)">
                   <p v-if="!prop[1].show">Select</p>
-                  <p v-if="prop[1].show" ><a href="/checkout">Proceed to Checkout</a></p>
+                  <p v-if="prop[1].show" ><router-link to="/checkout">Proceed to Checkout</router-link></p>
                   </div>
                 </div>
               </div>
@@ -110,7 +110,7 @@
                 <div class="card-footer">
                   <div class="card-footer-item button is-primary" v-on:click="listen(prop[2].id)">
                     <p v-if="!prop[2].show">Select</p>
-                    <p v-if="prop[2].show"><a href="/checkout" >Proceed to Checkout</a></p>
+                    <p v-if="prop[2].show"><router-link to="/checkout">Proceed to Checkout</router-link></p>
                   </div>
                 </div>
               </div>
@@ -122,7 +122,6 @@
                   Specially for People with long term plans
                   <br>
                   Take you bussines to other level
-
                 </div>
             </article>
             </div>
@@ -139,6 +138,7 @@
 </template>
 
 <script>
+import {mapActions} from 'vuex'
 export default {
   data () {
     return {
@@ -146,16 +146,16 @@ export default {
 
     }
   },
+
+
   methods:{
     listen: function(id){
-
+      this.$store.commit('select', id);
       for(let i=0;i<=2;i++)if(i!=id-1)this.prop[i].show=false;
       this.prop[id-1].show=!this.prop[id-1].show;
     },
-    pay: function(id){
-      this.prop[id-1].mod=!this.prop[id-1].mod;
-    }
   }
+
 }
 </script>
 
