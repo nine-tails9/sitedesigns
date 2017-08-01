@@ -27,24 +27,38 @@
 
             <div class="content" v-if="$store.state.id===1">
               <ul>
-                <li>Basic Hosting</li>
-                <li>All necessary features</li>
-                <li>.XYZ Domains</li>
+                <li>.XYZ Domain</li>
+                <li>Responsive Design</li>
+                <li>Unlimited Hosting Space</li>
+                <li>1 Private E-mail</li>
+                <li>Host a single website</li>
+                <li>Banner Free</li>
+                <li>Unlimited Bandwidth</li>
+                <li>6 Months After Sales Support</li>
               </ul>
             </div>
             <div class="content" v-if="$store.state.id===2">
               <ul>
-                <li>Paid Hosting</li>
-                <li>.COM Domain</li>
-                <li>Paid Hosting</li>
+                <li>.IN, .CO.IN Domains</li>
+                <li>Fully Reactive Website</li>
+                <li>Ads Free, Banner Free Hosting</li>
+                <li>Single Email</li>
+                <li>Host a single website</li>
+                <li>Unlimited Hosting Space</li>
+                <li>Unlimited Bandwidth</li>
+                <li>24*7 Experts Support for 1 Year</li>
               </ul>
             </div>
             <div class="content" v-if="$store.state.id===3">
               <ul>
-                <li>Full Pack</li>
-                <li>Royal Features</li>
-                <li>.COM Domains</li>
-                <li>5 Year After Sales Support</li>
+                <li>.COM, .NET like Premium Domains</li>
+                <li>Free cPanel</li>
+                <li>Unlimited Upload Space</li>
+                <li>Private Mailbox</li>
+                <li>Host a single website</li>
+                <li>Unlimited Bandwidth</li>
+                <li>Back Up Anytime</li>
+                <li>24*7 Support For 1 Year</li>
               </ul>
             </div>
 
@@ -82,7 +96,7 @@
           <label class="label has-text-grey">Contact</label>
           <div class="field has-addons">
           <div class="control has-icons-left">
-            <input class="input pin is-info" type="text" placeholder="+91" v-model=order.pin>
+            <input class="input pin is-info" type="text" placeholder="+91" value="+91" v-model=order.pin>
             <span class="icon is-left">
             <i class="fa fa-mobile-phone fa-lg"></i>
             </span>
@@ -96,13 +110,25 @@
           </div>
         </form>
         </p>
+        <div class="box">
+  <article class="media">
+    <div class="media-content">
+          <div class="content">
+            <strong>Include Paid Hosting @300/Month</strong>
+            <p>
+              <a class="subtitle button is-small is-hovered is-outlined is-info is-pulled-right" @click="feat=!feat">Features>></a>
+            </p>
+            </div>
 
-
+            </div>
+          </article>
+        </div>
       </div>
       <div class="tile is-child">
         <label class="label has-text-grey">Description</label>
         <textarea class="textarea is-info" placeholder="Your Use!" v-model=order.desc></textarea>
         <br>
+
         <div class="content is-pulled-left has-text-danger">
           <div class="subtitle" v-if=err.email>
             <span class="icon is-left">
@@ -129,10 +155,23 @@
           Placing Your Order&nbsp;<i v-show="loading" class="fa fa-spinner fa-spin"></i>
         </div>
         <div class="subtitle has-text-info is-pulled-left" v-if="placed">
-        <span class="icon"><i v-show="placed" class="fa fa-check-circle"></i></span>&nbsp;  Order Placed
+        <span class="icon"><i v-show="placed" class="fa fa-check-circle"></i></span>&nbsp;  Thank You! We'll Contact You Soon!
         </div>
 
+
+
         <button type="button" class="button submit is-pulled-right is-outlined is-info" v-on:click="post">Submit</button>
+        <transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated fadeOutDown" >
+        <section class="section" v-if="feat">
+          <div class="box">
+            <div class="media-content">
+              <span class="tag is-danger">Unlimited Webspace</span>&nbsp;&nbsp;<span class="tag is-info">Unlimited E-mail IDs</span>&nbsp;
+              <span class="tag is-success">Better Protection</span>
+            </div>
+          </div>
+        </section>
+      </transition>
+
       </div>
       </div>
     </div>
@@ -146,9 +185,10 @@ export default {
   data () {
     return {
       loading: false,
-      order: {email:"",phone:"",desc:"",name:"",pin:""},
+      order: {email:"",phone:"",desc:"",name:"",pin:"+91"},
       err: {email:false,phone:false,desc:false,name:false,pin:false},
-      placed: false
+      placed: false,
+      feat: false
     }
   },
   methods: {
@@ -186,6 +226,7 @@ export default {
         console.log(data);
         this.loading= false;
         this.placed = true;
+        this.order={email:"",phone:"",name:"",comment:""};
       });
     }
   },

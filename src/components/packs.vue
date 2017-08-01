@@ -3,9 +3,10 @@
   <div class="tile is-ancestor is-fullwidth">
   <div class="tile is-vertical is-fullwidth">
     <div class="tile">
+
       <div class="tile is-parent is-vertical is-fullwidth">
         <div class="tile is-child notification ">
-          <p class="title"><i class="fa fa-reorder fa-lg"></i> Basic</p>
+          <p class="title"><i class="fa fa-google-wallet fa-lg"></i> Basic</p>
           <div class="columns">
             <div class="column is-4 is-dark">
               <div class="card">
@@ -17,10 +18,20 @@
                 <div class="card-content">
                   <section>
                     <ul>
-                      <li>.xyz domain</li>
-                      <li>Free Hosting</li>
-                      <li>Single Email</li>
+                      <li>.XYZ Domain</li>
+                      <li>Responsive Design</li>
+                      <li>Unlimited Hosting Space</li>
+                      <li>Host a single website</li>
+                      <li>1 Private E-mail</li>
+                      <li>Banner free</li>
+                      <li>Unlimited Bandwidth</li>
+
+                      <li>6 Months After Sales Support</li>
+
                     </ul>
+                    <strong><div class="title is-5 has-text-right">
+                      Price : 1000 /-
+                    </div></strong>
                   </section>
                 </div>
                 <div class="card-footer">
@@ -35,9 +46,8 @@
               <div class="content">
               <article class="message">
                 <div class="message-body notification is-danger">
-                  Specially for People with long term plans
-                  <br>
-                  Take you bussines to other level
+                  <p>Plan Suitable For students with Low budget or for people with short term plans.</p>
+                  <p>This Plan includes all basic features required for </p>
                 </div>
             </article>
             </div>
@@ -69,14 +79,22 @@
                 <div class="card-content">
                   <section>
                     <ul>
-                      <li>.com domain</li>
-                      <li>Premium Hosting</li>
-                      <li></li>
+                      <li>.IN, .CO.IN Domains</li>
+                      <li>Fully Reactive Website</li>
+                      <li>Ads Free, Banner Free Hosting</li>
+                      <li>Host a single website</li>
+                      <li>Single Email</li>
+                      <li>Unlimited Hosting Space</li>
+                      <li>Unlimited Bandwidth</li>
+                      <li>24*7 Experts Support for  Year</li>
                     </ul>
+                    <strong><div class="title is-5 has-text-right">
+                      Price : 2500 /-
+                    </div></strong>
                   </section>
                 </div>
                 <div class="card-footer">
-                  <div class="card-footer-item button is-primary" v-on:click="select(prop[1].id)">
+                  <div class="card-footer-item button is-primary" v-on:click="listen(prop[1].id)">
                   <p v-if="!prop[1].show">Select</p>
                   <p v-if="prop[1].show" ><router-link to="/checkout">Proceed to Checkout</router-link></p>
                   </div>
@@ -99,12 +117,18 @@
                 <div class="card-content">
                   <section>
                     <ul>
-                      <li>.com domain</li>
-                      <li>Unlimited Disk Space</li>
+                      <li>.COM, .NET Domains like Premium Domains</li>
+                      <li>Free cPanel</li>
+                      <li>Unlimited Upload Space</li>
+                      <li>Private Mailbox</li>
+                      <li>Host a single website</li>
                       <li>Unlimited Bandwidth</li>
-                      <li>Email Service</li>
-                      <li>5 Years After SAles Support</li>
+                      <li>Back Up Anytime</li>
+                      <li>24*7 Support For 1 Year</li>
                     </ul>
+                    <strong><div class="title is-5 has-text-right">
+                      Price : 3500 /-
+                    </div></strong>
                   </section>
                 </div>
                 <div class="card-footer">
