@@ -1,5 +1,6 @@
 <template>
 <div>
+  <tm-body></tm-body>
   <div class="tile is-ancestor is-fullwidth">
   <div class="tile is-vertical is-fullwidth">
     <div class="tile">
@@ -8,7 +9,7 @@
         <div class="tile is-child notification ">
           <p class="title"><i class="fa fa-google-wallet fa-lg"></i> Basic</p>
           <div class="columns">
-            <div class="column is-4 is-dark">
+            <div class="column is-5 is-dark">
               <div class="card">
                 <div class="card-header">
                   <div class="card-header-title">
@@ -30,7 +31,7 @@
 
                     </ul>
                     <strong><div class="title is-5 has-text-right">
-                      Price : 1000 /-
+                      Price : 1200 /-
                     </div></strong>
                   </section>
                 </div>
@@ -42,14 +43,30 @@
               </div>
             </div>
           </div>
-            <div class="column is-half">
+            <div class="column is-6">
               <div class="content">
               <article class="message">
                 <div class="message-body notification is-danger">
-                  <p>Plan Suitable For students with Low budget or for people with short term plans.</p>
-                  <p>This Plan includes all basic features required for </p>
+                  <p>
+                  This is our basic plan suitable for people with short term requirements mostly adept for students and
+                  small entrepreneurs.
+                </p>
                 </div>
             </article>
+            <article class="message">
+              <div class="message-body notification is-primary">
+                <p>
+                You get your own .XYZ domain and a complete working website with <strong>unlimited</strong> hosting
+                space. Package also includes full support from our Developers for a period of <strong>six</strong> months.
+              </p>
+              </div>
+          </article>
+          <article class="message">
+            <div class="message-body notification is-success">
+              Charges After 1 year @1500 /-
+
+            </div>
+        </article>
             </div>
           </div>
           </div>
@@ -57,19 +74,29 @@
         <div class="tile is-child">
           <p class="title sp"><i class="fa fa-bolt fa-lg"></i> Premium</p>
           <div class="columns sp">
-            <div class="column is-half">
+            <div class="column is-5">
               <div class="content">
+                <article class="message">
+                  <div class="message-body notification is-danger">
+                    Want to give your dream Startup wings or get your Buisness to new heights, this is the place.
+                  </div>
+              </article>
               <article class="message">
-                <div class="message-body notification is-danger">
-                  Specially for People with long term plans
-                  <br>
-                  Take you bussines to other level
+                <div class="message-body notification is-primary">
+                  Introducing our <strong>Premium</strong>  plan which is <strong>most recommended </strong>for buyers.<br>
+                  This includes all necessary features and high quality Domain. Just relax and <br>let our experts handle issues for complete 1 year.
 
                 </div>
             </article>
+            <article class="message">
+              <div class="message-body notification is-success">
+                  Domain charges After One Year @1200 /-
+              </div>
+          </article>
+
             </div>
           </div>
-            <div class="column is-4">
+            <div class="column is-5">
               <div class="card ">
                 <div class="card-header ">
                   <div class="card-header-title notification is-light">
@@ -107,7 +134,7 @@
         <div class="tile is-child notification">
           <p class="title"><p class="title"><i class="fa fa-universal-access fa-lg"></i> Platinum</p>
           <div class="columns">
-            <div class="column is-4 is-dark">
+            <div class="column is-5 is-dark">
               <div class="card">
                 <div class="card-header">
                   <div class="card-header-title ">
@@ -117,7 +144,7 @@
                 <div class="card-content">
                   <section>
                     <ul>
-                      <li>.COM, .NET Domains like Premium Domains</li>
+                      <li>.COM, .NET Commercial Domains</li>
                       <li>Free cPanel</li>
                       <li>Unlimited Upload Space</li>
                       <li>Private Mailbox</li>
@@ -139,14 +166,27 @@
                 </div>
               </div>
             </div>
-            <div class="column is-half">
+            <div class="column is-6">
               <div class="content">
               <article class="message">
                 <div class="message-body notification is-danger">
-                  Specially for People with long term plans
-                  <br>
-                  Take you bussines to other level
+                  Introducing our Best <strong>Platinium</strong> plan with with Full Control panel support,Data Backup and
+                  a Private mailbox.
                 </div>
+            </article>
+            <article class="message">
+              <div class="message-body notification is-primary">
+                Get your own exclusive .COM and .NET domains which is most suitable <br>for<strong> Commercial Purposes.</strong>
+                Stay focused towards your goal and let us handle <br>
+                the side part.
+
+
+              </div>
+          </article>
+          <article class="message">
+            <div class="message-body notification is-success">
+              Pricing after 1 Year @1200 /-
+            </div>
             </article>
             </div>
           </div>
@@ -163,7 +203,11 @@
 
 <script>
 import {mapActions} from 'vuex'
+import Body from './body.vue'
 export default {
+  components: {
+    'tm-body': Body
+  },
   data () {
     return {
       prop: [{id:1,show:false,mod:false},{id:2,show:false,mod:false},{id:3,show:false,mod:false}],

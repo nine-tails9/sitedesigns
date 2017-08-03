@@ -114,7 +114,11 @@
   <article class="media">
     <div class="media-content">
           <div class="content">
-            <strong>Include Paid Hosting @300/Month</strong>
+			<label class="checkbox">
+  <input type="checkbox">
+			<strong>Include Paid Hosting @300/Month</strong>
+			</label>
+            
             <p>
               <a class="subtitle button is-small is-hovered is-outlined is-info is-pulled-right" @click="feat=!feat">Features>></a>
             </p>

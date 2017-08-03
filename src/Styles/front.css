@@ -1,0 +1,227 @@
+#container {
+    width:60%;
+    height:53%;
+    position:relative;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+#overlay {
+    position:fixed;
+    top:0;
+    left:0;
+     z-index:1;
+    height:100%;
+    width:100%;
+    background:#ffffff;
+    opacity:0.6;
+    display:none;
+}
+#video {
+display:none;
+position: relative;
+top:-50%;
+z-index:2;
+margin-left: auto;
+margin-right: auto;
+}
+
+.thumbnail {
+   height: 120%;
+   width: auto;
+   margin-left: auto;
+   margin-right: 6%;
+   -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+   filter: url(#drop-shadow);
+   -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+   filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+
+.play-button{
+  width: 66px;
+    height: 66px;
+    background-size: 67px 67px;
+    background-image: url(/src/assets/play-button.png);
+    background-repeat: no-repeat;
+    margin: -33px 0 0 -33px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    opacity: .5;
+}
+.play-button:hover{
+  opacity: 1.0;
+    filter: alpha(opacity=100);
+}
+
+
+.bg {
+  height: 600px;
+  width: 100%;
+    background-image: url("/src/assets/bg6.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    padding-top: 40px;
+    text-align: center;
+    position: static;
+}
+.title1 {
+position: relative;
+    margin: auto;
+    font: 43px 'PT Sans', sans-serif;
+    color: black;
+    position: static;
+    word-spacing: 120%;
+}
+.subtitle1 {
+position: relative;
+    margin: auto;
+    font: 17px 'PT Sans', sans-serif;
+    font-weight: lighter;
+    color: black;
+    position: static;
+    word-spacing: 160%;
+}
+
+.about-us {
+  margin-top: -30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 300px;
+  background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    padding: 40px 30px;
+    padding-bottom: 60px
+}
+.first {
+  width: 100%;
+  height: auto;
+  background: #f3f3f3;
+  position: static;
+}
+.about-title {
+  position: relative;
+      margin: auto;
+      color: #666;
+      font-family: arial;
+    font-size: 200%;
+    font-weight: bold;
+    position: static;
+  }
+  .about-title-2 {
+    position: relative;
+        margin: auto;
+        color: #4aa9d3;
+    font-weight: bold;
+    font-size: 120%;
+    padding: 2px 0 20px 0;
+    position: static;
+    }
+    .about-para {
+      position: relative;
+          margin: auto;
+          color: #333;
+      font-size: 100%;
+    
+      }
+      .chat-title {
+        position: relative;
+            margin: auto;
+            color: #4aa9d3;
+        font-weight: bold;
+        font-size: 120%;
+        padding: 15px 0 5px 0;
+        position: static;
+        }
+        .chat-para {
+          width: 79%;
+          height: 60%;
+              margin-left: 160px;
+          font-size: 100%;
+          padding: 5px;
+          color: #4a4a4a;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+          }
+        hr{
+          width: 90%;
+          margin-top: 25px;
+          margin-bottom: 10px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .space{
+          width: 100%;
+          height: 1.8%;
+          border: 1px solid;
+        }
+
+      #portfolio {
+        width: 100%;
+        height: 130px;
+        padding-left: 4.7%;
+          overflow-y: hidden;
+          margin-top: 5%;
+          position: static;
+
+      }
+      .portfolio-title {
+            color: #333;
+            font-family: arial;
+          font-size: 120%;
+          font-weight: bold;
+          margin-bottom: 10px;
+          position: static;
+          color: #4aa9d3;
+
+        }
+        .portfolio-content{
+          width: 84.7%;
+          height: 128px;
+          float: left;
+          padding: 10px 30px;
+          color: #333;
+          font-weight: normal;
+          position: static;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1.5;
+          font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+           "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+        }
+        .portfolio-image{
+          width: 128px;
+          height: 128px;
+          float: left;
+          z-index: 70px;
+
+        }
+
+          .portfolio-box {
+            margin-top: 3.5%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 98%;
+            height: 750px;
+            background: #fff;
+              border-radius: 5px;
+              box-shadow: 0 0 10px rgba(0,0,0,.2);
+              padding-left: 1.5%;
+              padding-top: 1.5%;
+
+          }
+          .line{
+            width: 90%;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+          }
