@@ -115,12 +115,13 @@
     <div class="media-content">
           <div class="content">
 			<label class="checkbox">
-  <input type="checkbox">
+  <input type="checkbox" v-model="order.check">
 			<strong>Include Paid Hosting @300/Month</strong>
 			</label>
-            
+
             <p>
-              <a class="subtitle button is-small is-hovered is-outlined is-info is-pulled-right" @click="feat=!feat">Features>></a>
+              <a class="subtitle button is-small is-hovered is-outlined is-info is-pulled-right" @click="feat=!feat">
+                Features>></a>
             </p>
             </div>
 
@@ -189,7 +190,7 @@ export default {
   data () {
     return {
       loading: false,
-      order: {email:"",phone:"",desc:"",name:"",pin:"+91"},
+      order: {email:"",phone:"",desc:"",name:"",pin:"+91",check:false},
       err: {email:false,phone:false,desc:false,name:false,pin:false},
       placed: false,
       feat: false
@@ -230,7 +231,7 @@ export default {
         console.log(data);
         this.loading= false;
         this.placed = true;
-        this.order={email:"",phone:"",name:"",comment:""};
+        this.order={email:"",phone:"",name:"",comment:"",check:false};
       });
     }
   },

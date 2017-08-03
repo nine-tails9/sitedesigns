@@ -1,7 +1,7 @@
 <template>
   <div class="first">
 
-    <nav class="navbar" style=" background-color: #fff;">
+    <nav class="navbar" style=" background-color:#fff" id="Top">
     <div class="navbar-brand">
       <a class="navbar-item" href="http://www.sitedesigns.xyz">
         <img src="/src/assets/logo.png" width="50%" height="500%">
@@ -20,7 +20,10 @@
 
       <div class="navbar-end">
         <a class="navbar-item" href="#about-us" target="_blank" style="color:black;">
-          Who We are
+          Who We Are
+        </a>
+        <a class="navbar-item" href="#features" target="_blank" style="color:black;">
+          Features
         </a>
         <a class="navbar-item" href="#portfolio" target="_blank" style="color:black;">
           Web Portfolio
@@ -37,9 +40,8 @@
     </div>
   </nav>
   <div class="bg">
-    <h1 class="title1">Project tracking for distributed companies.</h1>
-    <h2 class="subtitle1"><br>Are you spread across different cities and time zones? Some of your team traveling?
-       We built Blossom for you.</h2>
+    <h1 class="title is-4 has-text-white" style="letter-spacing:4px;">THE ORIGINAL</h1>
+    <h2 class="title has-text-grey" style="letter-spacing:10px;">CREATIVE DIGITAL DESIGNING</h2>
 
        <div id = "container">
          <img src="src/assets/thumbnail.png" class="thumbnail" ><div class="play-button" id="btn"></div></img>
@@ -62,61 +64,70 @@
            </div>
 
   </div>
-  <div class="about-us" id="about-us">
+  <div class="about-us about" id="about-us">
 
-    <h1 class="about-title">We're a little bit different</h1>
-    <h2 class="about-title-2">introducing Bronco</h2>
-    <div class="about-para">At Bronco, we try and do things differently. Our passion and success is down to a team of talented experts
-    working with a range of clients across multiple industries. We have all our resource and
-    expertise in-house so who you talk to and meet
-    
+    <h1 class="title has-text-grey-dark">We're Little Bit <strong>Different</strong></h1>
+    <h2 class="title about-title-2 is-5">Introducing <strong><span style="letter-spacing:2px;">SiteDesigns</span></strong></h2>
+    <div class="about-para" style="letter-spacing:1px;">We Are a company of Dev's. We have simple structure and an Ideal sized
+      team engrossed with <strong>different</strong> talents. It allows us to react quickly to your needs. We believe
+      our lack of <strong>middle management</strong> works best for <strong> us </strong>and our <strong> clients</strong>. So you can talk directly to the person
+      who is doing your work with <strong>nothing lost</strong> in translation.
+
     </div>
 
   </div>
   <hr>
-
-  <div class="bubble"> <h1 class="chat-title">Prioritising usability to increase conversion</h1> <br>
+<h1 class="title has-text-centered" id="features">Features</h1>
+  <div class="bubble post2"> <h1 class="chat-title">Responsive design with a mobile-first approach</h1> <br>
     <div class="portfolio-image"><figure class="image is-128x128">
-    <img src="/src/assets/1.svg">
+    <img src="/src/assets/2.svg">
   </figure></div>
-  <div class="chat-para">It's simple. The easier a website is to use the more likely your users become customers.
-    Building on years of experience gives us an understanding of the barriers that affect conversion and how to avoid these
+  <div class="chat-para">With years of responsive design experience you can be sure to maximise the reach of your website beyond the desktop, delivering an appropriate experience no matter where your user is.
+</div>
   </div>
-  </div>
-              <div class="bubble2"> <h1 class="chat-title">Prioritising usability to increase conversion</h1> <br>
+              <div class="bubble2 post"> <h1 class="chat-title">Loading in a flash</h1> <br>
                 <div class="portfolio-image"><figure class="image is-128x128">
-                <img src="/src/assets/2.svg">
+                <img src="/src/assets/1.svg">
               </figure></div>
-              <div class="chat-para">It's simple. The easier a website is to use the more likely your users become customers.
-                Building on years of experience gives us an understanding of the barriers that affect conversion and how to avoid these</div>
-               </div>
+              <div class="chat-para">
+              How frustrating is it to wait for a webpage to load on a slow connection? Our ever evolving build processes
+              are optimised to squeeze every last millisecond out of a visually rich and engaging website.</div>
+            </div>
 
 
-                <div class="bubble"> <h1 class="chat-title">Prioritising usability to increase conversion</h1> <br>
+                <div class="bubble post2"> <h1 class="chat-title">A unique style to suit</h1> <br>
                             <div class="portfolio-image"><figure class="image is-128x128">
                             <img src="/src/assets/3.svg">
                           </figure></div>
-                          <div class="chat-para">It's simple. The easier a website is to use the more likely your users become customers.
-                            Building on years of experience gives us an understanding of the barriers that affect conversion and how to avoid these</div>
+                          <div class="chat-para">
+                            Whether building something new or taking inspiration from existing marketing we work to create a design that is the ideal reflection of the
+                            research we've undertaken, the business requirements and the feedback we receive throughout the design process.
+
+                          </div>
                           </div>
 
-                                      <div class="bubble2">
-                                        <h1 class="chat-title">Prioritising usability to increase conversion</h1> <br>
+                                      <div class="bubble2 post">
+                                        <h1 class="chat-title">A functional and easy to use website is the baseline</h1> <br>
                                         <div class="portfolio-image"><figure class="image is-128x128">
                                         <img src="/src/assets/4.svg">
                                       </figure></div>
-                                                <div class="chat-para">It's simple. The easier a website is to use the more likely your users become customers.
-                                                  Building on years of experience gives us an understanding of the barriers that affect conversion and how to avoid these</div>
+                                                <div class="chat-para">
+                                                A website that just works;
+                                                this is the minimum we hope to deliver on any new website.
+                                                But just being functional isn't always enough to help grow a business.</div>
                                                 </div><hr>
-  <div class="portfolio-box">
+  <div class="portfolio-box corousel2">
     <div class="portfolio-image"><figure class="image is-128x128">
     <img src="/src/assets/5.svg">
   </figure></div>
-    <div class="portfolio-content"><div class="portfolio-title">Responsive design with a mobile-first approach</div>
-  At Bronco we code almost exclusively in PHP, and so when it comes to Content Management Systems (CMS) we've built up a lot of experience with WordPress.
-  Its fluidity and large community of plugin developers make it the ideal choice for many blogs and websites.</div><hr>
+    <div class="portfolio-content"><div class="portfolio-title">Pick from a custom or open-source Templates</div>
+    At SiteDesigns we code almost exclusively in Vue Js, and so when it comes to Content Management(CM),
+    fluidity and large open source community of developers make it the ideal choice for many blogs and websites.
+  But sometimes a pre-existing CMs isn't the best fit to a particular set of requirements;
+  In these instances our expert team of developers are well equipped to provide a
+   bespoke solution that's well-suited to your needs..</div><hr>
 
-<div class="css-slider-mask" >
+1<div class="css-slider-mask" >
   <ul class="css-slider with-responsive-images with-selection-disabled with-reflection with-fade-in">
     <li class="slide" tabindex="1" id="l1">
       <span class="slide-outer">

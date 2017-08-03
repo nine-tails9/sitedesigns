@@ -3,7 +3,7 @@ $(function () {
 
 $('#btn').click(function() {
     $('#video, #overlay').fadeIn('slow');
-    $('#video').html('<iframe width=560 height=315 src=https://www.youtube.com/embed/OMOga8x6aLk frameborder=0 allowfullscreen></iframe>');
+    $('#video').html('<iframe width=560 height=315 src="https://www.youtube.com/embed/WNaha5rDRBo" frameborder=0 allowfullscreen></iframe>');
 });
 
 $(document).mouseup(function (e)

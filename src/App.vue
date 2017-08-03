@@ -25,7 +25,7 @@
               <p ><h1 class="title is-4 left"><strong>We are Always Looking for Next Challenge!</strong></h1></p>
             </div>
             <div class="tile is-child has-text-right">
-              <div class="marg ryt button is-light is-medium" @click="modal=!modal">
+              <div class="marg ryt button is-light is-medium" @click="modal=!modal" id="Contact-Us">
                 Get in Touch!
               </div>
               <div class="modal is-active" v-if="modal">
@@ -111,7 +111,7 @@
           <p class="title is-6"><small>Sitedesigns.XYZ Beta v0.5</small></p>
         </div>
         <div class="column">
-          <p ><i class="fa fa-arrow-up fa-3x"></i><br></p><br>
+          <p ><a href="#Top"><i class="fa fa-arrow-up fa-3x"></i></a><br></p><br>
         </div>
 
 

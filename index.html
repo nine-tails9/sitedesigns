@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./src/Styles/chat.css">
     <link rel="stylesheet" href="./src/Styles/front.css">
     <link rel="stylesheet" href="./src/Styles/layouts.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/jquery/3.2.1/jquery.min.js "></script>
   </head>
   <body>
@@ -16,12 +17,46 @@
     <script type="text/javascript" src="./src/Styles/scroll.js"></script>
     <script type="text/javascript" src="./src/Styles/video.js"></script>
     <script type="text/javascript" src="./src/Styles/auto-scroll.js"></script>
-
+    <script src="./src/Styles/viewportchecker.js"></script>
     <link rel="stylesheet" href="./src/Styles/scroll.js">
     <link rel="stylesheet" href="./src/Styles/video.js">
     <link rel="stylesheet" href="./src/Styles/auto-scroll.js">
+
     <div id="app"></div>
     <script src="/dist/build.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function() {
+	    jQuery('.post').addClass("hidden").viewportChecker({
+	    classToAdd: 'visible animated slideInRight', // Class to add to the elements when they are visible
+	    offset: 100
+	   });
+    });
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+  jQuery('.post2').addClass("hidden").viewportChecker({
+  classToAdd: 'visible animated slideInLeft', // Class to add to the elements when they are visible
+  offset: 100
+ });
+});
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+  jQuery('.about').addClass("hidden").viewportChecker({
+  classToAdd: 'visible animated fadeInDown', // Class to add to the elements when they are visible
+  offset: 100
+ });
+});
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+  jQuery('.corousel2').addClass("hidden").viewportChecker({
+  classToAdd: 'visible animated fadeIn ', // Class to add to the elements when they are visible
+  offset: 100
+ });
+});
+
+</script>
 
 
   </body>

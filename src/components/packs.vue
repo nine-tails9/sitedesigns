@@ -1,6 +1,10 @@
 <template>
 <div>
+
   <tm-body></tm-body>
+  <div class="title is-2 has-text-centered" style="margin-top:2%;" id="Pricing">
+    Pricing
+  </div>
   <div class="tile is-ancestor is-fullwidth">
   <div class="tile is-vertical is-fullwidth">
     <div class="tile">
@@ -43,7 +47,7 @@
               </div>
             </div>
           </div>
-            <div class="column is-6">
+            <div class="column is-6 post">
               <div class="content">
               <article class="message">
                 <div class="message-body notification is-danger">
@@ -74,7 +78,7 @@
         <div class="tile is-child">
           <p class="title sp"><i class="fa fa-bolt fa-lg"></i> Premium</p>
           <div class="columns sp">
-            <div class="column is-5">
+            <div class="column is-5 post2">
               <div class="content">
                 <article class="message">
                   <div class="message-body notification is-danger">
@@ -166,7 +170,7 @@
                 </div>
               </div>
             </div>
-            <div class="column is-6">
+            <div class="column is-6 post">
               <div class="content">
               <article class="message">
                 <div class="message-body notification is-danger">
