@@ -32,7 +32,7 @@
                 <div class="modal-background"></div>
                 <div class="modal-card">
                   <header class="modal-card-head has-text-left is-primary">
-                    <p class="modal-card-title has-text-grey"><strong>Submit Your Query Or Feedback</strong> </p>
+                    <p class="modal-card-title has-text-grey"><strong>Type Your Query Or Feedback</strong> </p>
                     <button class="delete" @click="close"></button>
                   </header>
                   <section class="modal-card-body">
